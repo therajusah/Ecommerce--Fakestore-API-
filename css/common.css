@@ -1,6 +1,9 @@
 :root {
     --blue-gray: #cbd5de;
-    
+    --pale-blue: #2c3e50;
+    --mid-gray: #999;
+    --jean-blue: #3b5875;
+
 }
 
 html {
@@ -39,6 +42,7 @@ line-height: 1.5;
 
 #header .header-wrapper .user-actions a {
 color: black;
+
 text-decoration: none;
 }
 
