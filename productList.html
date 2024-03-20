@@ -43,52 +43,60 @@
           <div class="product-list-sidebar d-flex flex-column">
             <div class="sidebar-title">Search Products</div>
             <div class="sidebar-search form-group">
-                <input type="text" placeholder="Search by name" class="form-control" id="searchInput">
+              <input
+                type="text"
+                placeholder="Search by name"
+                class="form-control"
+                id="searchInput"
+              />
             </div>
             <div class="sidebar-title fw-bold">Categories</div>
             <div id="categoryList">
-                <a href="#"  class="d-flex text-decoration-none">Electronics</a>
-                <a href="#"  class="d-flex text-decoration-none">Stationary</a>
-                <a href="#"  class="d-flex text-decoration-none">MensWear</a>
-                <a href="#"  class="d-flex text-decoration-none">Sports</a>
-                <a href="#"  class="d-flex text-decoration-none">Gaming</a>
+              <a href="#" class="d-flex text-decoration-none">Electronics</a>
+              <a href="#" class="d-flex text-decoration-none">Stationary</a>
+              <a href="#" class="d-flex text-decoration-none">MensWear</a>
+              <a href="#" class="d-flex text-decoration-none">Sports</a>
+              <a href="#" class="d-flex text-decoration-none">Gaming</a>
             </div>
 
-
-            <div class="sidebar-title">
-                Filter by price
-            </div>
+            <div class="sidebar-title">Filter by price</div>
             <div class="price-filter">
-                <div class="price-filter-select d-flex flex-row justify-content-between">
-                    <div class="form-group">
-                        <select name="minPrice" class="form-select" id="minPrice">
-                           <option value="0">0</option>
-                           <option value="1000">1000</option>
-                           <option value="2000">2000</option>
-                           <option value="5000">5000</option>
-                           <option value="10000">10000</option>
-                           <option value="20000">20000</option>
-                           <option value="100000">100000</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <select name="maxPrice" class="form-select" id="maxPrice">
-                           <option value="0">0</option>
-                           <option value="1000">1000</option>
-                           <option value="2000">2000</option>
-                           <option value="5000">5000</option>
-                           <option value="10000">10000</option>
-                           <option value="20000">20000</option>
-                           <option value="100000">100000</option>
-                        </select>
-                    </div>
+              <div
+                class="price-filter-select d-flex flex-row justify-content-between"
+              >
+                <div class="form-group">
+                  <select name="minPrice" class="form-select" id="minPrice">
+                    <option value="0">0</option>
+                    <option value="1000">1000</option>
+                    <option value="2000">2000</option>
+                    <option value="5000">5000</option>
+                    <option value="10000">10000</option>
+                    <option value="20000">20000</option>
+                    <option value="100000">100000</option>
+                  </select>
                 </div>
-                <div class="price-filter-title d-flex flex-row justify-content-start">
-                    <div id="price-filter-label-min">Min Price</div>
-                    <div id="price-filter-label-mac">Max Price</div>
+                <div class="form-group">
+                  <select name="maxPrice" class="form-select" id="maxPrice">
+                    <option value="0">0</option>
+                    <option value="1000">1000</option>
+                    <option value="2000">2000</option>
+                    <option value="5000">5000</option>
+                    <option value="10000">10000</option>
+                    <option value="20000">20000</option>
+                    <option value="100000">100000</option>
+                  </select>
                 </div>
+              </div>
+              <div
+                class="price-filter-title d-flex flex-row justify-content-start"
+              >
+                <div id="price-filter-label-min">Min Price</div>
+                <div id="price-filter-label-mac">Max Price</div>
+              </div>
             </div>
-            <button class="btn btn-danger clear-filter" id="clear">Clear Filters</button>
+            <button class="btn btn-danger clear-filter" id="clear">
+              Clear Filters
+            </button>
           </div>
           <div class="product-list-box" id="productList">
             <!-- Add list of Product -->
