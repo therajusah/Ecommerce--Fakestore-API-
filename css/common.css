@@ -6,6 +6,7 @@
   --light-blue: #95afc0;
   --sky-blue: #dff9fb;
   --dark-sky-blue: #c7ecee;
+  --light-gray: #ccc;
 }
 
 html {
@@ -59,5 +60,5 @@ html {
 
 .price-filter .price-filter-select > div {
   margin-bottom: 0.5rem;
-  
+
 }
