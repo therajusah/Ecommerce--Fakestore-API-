@@ -1,0 +1,18 @@
+#paymentConfirmationPage {
+    padding-top: 3rem;
+  }
+  
+  .confirmation-title {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+  }
+  
+  .confirmation-message {
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
+  }
+  
+  .button-wrapper {
+    margin-top: 2rem;
+  }
+  
