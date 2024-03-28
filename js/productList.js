@@ -4,9 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(response.data);
         return response.data;
     }
-    async function populateProducts() {
+    async function populateProducts(flag, customProducst) {
+        let products = customProducst;
+        if(flag == false){
+             products = await fetchProducts();
+        }
         const productLists  = document.getElementById("productList");
-        const products = await fetchProducts();
         products.forEach(product => {
             const productItem = document.createElement("a");
             productItem.target = "_blank";
@@ -22,7 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
             productName.classList.add("product-name", "text-center");
             productPrice.classList.add("product-price", "text-center");
 
-            productName.textContent = product.title;
+            productName.textContent = product.title.substring(0, 12)+ "...";
+
             productPrice.textContent = `&#8377; ${product.price}`;
 
 
@@ -40,5 +44,24 @@ productLists.appendChild(productItem);
         })
     }
 
-    populateProducts();
+    populateProducts(false);
+
+    const filterSearch = document.getElementById("search");
+    filterSearch.addEventListener("click", async () => {
+        const productList = document.getElementById("productList");
+
+    const minPrice = Number(document.getElementById("minPrice").value);
+    const maxPrice = Number(document.getElementById("maxPrice").value);
+const products = await fetchProducts();
+filteredProducts = products.filter(product => product.price >= minPrice && product.price <= maxPrice);
+productList.innerHTML ="";
+populateProducts(true, filteredProducts);
+
+    });
+
+
+    const resetFilter = document.getElementById("clear");
+    resetFilter.addEventListener("click", () =>  {
+        window.location.reload();
+    })
 })
