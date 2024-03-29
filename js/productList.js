@@ -33,7 +33,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       productName.textContent = product.title.substring(0, 12) + "...";
 
-      productPrice.textContent = `&#8377; ${product.price}`;
+      productPrice.textContent = `₹ ${product.price}`;
+
 
       const imageInsideProductImage = document.createElement("img");
       imageInsideProductImage.src = product.image;
