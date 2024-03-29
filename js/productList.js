@@ -40,15 +40,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       productPrice.classList.add("product-price", "text-center");
   
       productName.textContent = product.title.substring(0, 12) + "...";
-<<<<<<< HEAD
       productPrice.textContent = `₹ ${product.price}`;
   
-=======
-
-      productPrice.textContent = `₹ ${product.price}`;
-
-
->>>>>>> e4db854d767215b5329da6515dcd7b5f6c5f23af
       const imageInsideProductImage = document.createElement("img");
       imageInsideProductImage.src = product.image;
   
