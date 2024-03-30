@@ -63,10 +63,11 @@ html {
 
 }
 
+
+
 .loader-backdrop {
   background-color: rgba(0, 0, 0, 0.5);
-  /* opacity: 0.7; */
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: fixed;
   top: 0;
@@ -95,7 +96,14 @@ html {
   animation: spin 1s linear infinite;
 }
 
+
+
+
+
 @keyframes spin {
   0% { transform: translate(-50%, -50%) rotate(0deg); }
   100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
+
+
+

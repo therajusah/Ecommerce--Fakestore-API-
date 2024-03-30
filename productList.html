@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="./css/productList.css" />
   </head>
   <body>
+    <!-- Loader -->
+    <div class="loader-backdrop" id="loader-backdrop">
+      <div class="loader">
+        <div class="loader-circle"></div>
+      </div>
+    </div>
+
     <div id="productListPage">
       <!-- Navbar -->
       <nav id="header">
@@ -52,10 +59,26 @@
             </div>
             <div class="sidebar-title fw-bold">Categories</div>
             <div id="categoryList">
-              <a href="productList.html?category=electronics" class="d-flex text-decoration-none">Electronics</a>
-              <a href="productList.html?category=jewelery" class="d-flex text-decoration-none">Jewelery</a>
-              <a href="productList.html?category=men's clothing" class="d-flex text-decoration-none">Men's Clothing</a>
-              <a href="productList.html?category=women's clothing" class="d-flex text-decoration-none">Women's Clothing</a>
+              <a
+                href="productList.html?category=electronics"
+                class="d-flex text-decoration-none"
+                >Electronics</a
+              >
+              <a
+                href="productList.html?category=jewelery"
+                class="d-flex text-decoration-none"
+                >Jewelery</a
+              >
+              <a
+                href="productList.html?category=men's clothing"
+                class="d-flex text-decoration-none"
+                >Men's Clothing</a
+              >
+              <a
+                href="productList.html?category=women's clothing"
+                class="d-flex text-decoration-none"
+                >Women's Clothing</a
+              >
             </div>
 
             <div class="sidebar-title">Filter by price</div>
@@ -115,15 +138,10 @@
               <div class="product-price text-center">&#8377; 16000</div>
             </a>
             <!-- Everything below is copy pasted  -->
-        
           </div>
         </div>
       </div>
     </div>
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script
