@@ -32,7 +32,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       "text-decoration-none",
       "d-inline-block"
     );
-    productItem.href = "productDetails.html";
+    productItem.href = `productDetails.html?id=${product.id}`;
+
 
     const productImage = document.createElement("div");
     const productName = document.createElement("div");

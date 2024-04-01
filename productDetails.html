@@ -40,21 +40,18 @@
         <div class="row">
           <div class="product-details-wrapper d-flex justify-content-between align-items-start flex-row">
             <div class="product-img d-flex">
-              <img src="./img/product.jpg" alt="Product Image" id="prodImage" />
+              <img src="" alt="Product Image" id="prod-Image" />
             </div>
 
 
 
             <div class="product-details-box d-flex flex-column">
                 <div id="productDetails">
-                <div class="product-name">Some product</div>
-                <div class="product-price fw-bold">&#8377; 16000</div>
+                <div class="product-name" id="prod-name"></div>
+                <div class="product-price fw-bold" id="prod-price"></div>
                 <div class="product-description">
                     <div class="product-description-title fw-bold">Description</div>
-                    <div class="product-description-data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, enim.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, enim.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, enim.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, enim.
+                    <div class="product-description-data" id="prod-description-data">
 
                     </div>
 
@@ -70,7 +67,7 @@
     </div>
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
       integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
@@ -81,5 +78,7 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/productDetails.js"></script>
   </body>
 </html>
