@@ -2,6 +2,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   const loaderBackdrop = document.getElementById("loader-backdrop");
   loaderBackdrop.style.display = 'block'; // Show loader initially
 
+  function getQueryParams() {
+    const queryParams = new URLSearchParams(window.location.search);
+    const queryParamsObject = Object.fromEntries(queryParams.entries());
+    return queryParamsObject;
+  }
+
   async function fetchProducts() {
     const response = await axios.get("https://fakestoreapi.com/products");
     return response.data;
@@ -12,8 +18,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     return response.data;
   }
 
-  const queryParams = new URLSearchParams(window.location.search);
-  const category = queryParams.get('category');
+  async function fetchProductById(id) {
+    const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
+    return response.data;
+  }
+
+  const queryParams = getQueryParams();
+  const category = queryParams['category'];
 
   let products;
   if (category) {
@@ -33,7 +44,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       "d-inline-block"
     );
     productItem.href = `productDetails.html?id=${product.id}`;
-
 
     const productImage = document.createElement("div");
     const productName = document.createElement("div");
@@ -79,7 +89,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         "text-decoration-none",
         "d-inline-block"
       );
-      productItem.href = "productDetails.html";
+      productItem.href = `productDetails.html?id=${product.id}`;
 
       const productImage = document.createElement("div");
       const productName = document.createElement("div");
